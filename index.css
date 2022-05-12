@@ -21,6 +21,13 @@ body {
 	/*DARK*/
 	/*background-color: rgba(var(--bg-dark),1); */
 }
+
+/*HIDE */
+.hide {
+	display: none;
+}
+
+
 /*---CONTAINER---*/
 .grid-container {
   min-height: 100vh;
