@@ -1,0 +1,33 @@
+
+body {
+	width: 100vw;
+	min-height: 100vh;
+}
+
+.grid-container {
+	min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 2fr 1fr 80px;
+  grid-template-areas: "navbar" "canvas" "palavras" "botoes";
+}
+
+.grid-navbar {
+	grid-area: navbar;
+	background-color: tomato;
+}
+
+.grid-canvas {
+	grid-area: canvas;
+	background-color: purple;
+}
+
+.grid-palavras {
+	grid-area: palavras;
+	background-color: aliceblue;
+}
+
+.grid-botoes {
+	grid-area: botoes;
+	background-color: seagreen;
+}

@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&display=swap');
+:root {
+  --cor-global: 92,122,255;	
+
+  --cor-azul: 92,122,255; /*AZUL - 5c7aff */
+  --cor-verde: 3,181,170; /*VERDE - 03b5aa */
+  --cor-vermelho: 251,80,18; /*VERMELHO - fb5012 */
+
+  --bg-dark: 28,28,28;
+
+  --SVG-AZUL: invert(50%) sepia(37%) saturate(5876%) hue-rotate(213deg) brightness(101%) contrast(101%);
+  --SVG-VERDE: invert(49%) sepia(87%) saturate(471%) hue-rotate(127deg) brightness(94%) contrast(98%);
+  --SVG-VERMELHO: invert(41%) sepia(68%) saturate(4148%) hue-rotate(354deg) brightness(100%) contrast(98%);
+}
+
+body {
+	font-family: 'Poppins',sans-serif;
+	/*LIGHT*/
+	background-color: rgba(var(--cor-global),0.1); 
+	/*DARK*/
+	/*background-color: rgba(var(--bg-dark),1); */
+}
+/*---CONTAINER---*/
+.grid-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 90px 2fr 80px 100px;
+  grid-template-areas: "navbar" "imagem" "btn1" "btn2";
+}
+/*---NAVBAR---*/
+.grid-navbar {
+	grid-area: navbar;
+}
+/*---ICONES---*/
+#ico-logo {
+	padding: 0.25em;
+	margin: 0.5em;
+	width: 4em;
+	height: 4em;
+	border-radius: 50%;
+}
+#ico-dark, 
+#ico-light,
+#ico-config {
+	margin: 1em;
+	width: 2em;
+}
+/*---ICONES MODAL---*/
+.quadrado {
+	padding: 0.5em;
+	width: 3.5em;
+}
+/*---CORES ICONES---*/
+.svg-azul {
+	filter: var(--SVG-AZUL);
+}
+.svg-vermelho {
+	filter: var(--SVG-VERMELHO);
+}
+.svg-verde {
+	filter: var(--SVG-VERDE);
+}
+/*---MODAL---*/
+.modal {
+	position: absolute;
+	top: 20px;
+	right: 60px;
+	width: 250px;
+	height: 250px;
+	z-index: 2;
+	border-radius: 25px;
+	background-color: rgba(var(--bg-global),1.0);
+	border: 3px solid rgba(var(--cor-global),1.0);
+}
+.modal-ln1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.modal-ln2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.modal-ln3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+.modal-ln2 p {
+	color: rgba(var(--cor-global),1.0);
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+/*---IMAGEM---*/
+#img-inicio {
+	width: 400px;
+	height: auto;
+}
+.grid-imagem {
+	grid-area: imagem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+}
+.grid-imagem h1 {
+	font-size: 50px;
+	letter-spacing: 8px;
+	color: rgba(var(--cor-global),1.0);
+	padding: 0.15em;
+	text-align: center;
+	font-family: 'Exo 2', sans-serif;
+}
+
+.grid-btn1 {
+	grid-area: btn1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.grid-btn2 {
+	grid-area: btn2;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+
+}
+
+/*--BOTOES---*/
+.btn {
+	font-family: "Poppins",sans-serif;
+	border-radius: 25px;
+	padding: .15em;
+	transition: 0.25s transform;
+	transition: 0.25s box-shadow;
+	width: 250px;
+	height: 50px;
+}
+.btn:hover {
+	/*transform: scale(1.1);*/
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.btn-1 {
+	background-color: rgba(var(--cor-global),1.0);
+	border:  2px solid rgba(var(--cor-global),1.0);
+	color: #f2f2f2;
+}
+.btn-2 {
+	background-color: rgba(var(--cor-global),0.1);
+	border:  2px solid rgba(var(--cor-global),1.0);
+	color: rgba(var(--cor-global),1.0);
+
+}
+
+
+
+/*----------------------------------------------------------------------*/
+/*MEDIA QUERIES*/
+/*----------------------------------------------------------------------*/
+/* DESKTOP  */
+@media only screen and (min-width: 769px) {
+
+}
+/*----------------------------------------------------------------------*/
+/* TABLET */
+/*----------------------------------------------------------------------*/
+@media only screen and (min-width: 481px) and (max-width:768px) {
+
+}
+/*----------------------------------------------------------------------*/
+/* CELPHONE */
+/*----------------------------------------------------------------------*/
+@media only screen and (max-width: 480px) {
+#img-inicio {
+	width: 350px;
+	height: auto;
+}
+.grid-imagem h1 {
+	font-size: 30px;
+	letter-spacing: 4px;
+}
+
+}
