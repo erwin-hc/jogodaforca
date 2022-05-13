@@ -1,33 +1,185 @@
-
-body {
-	width: 100vw;
-	min-height: 100vh;
+.canvas {
+	border: 1px solid green;
+	width: 350px;
+	height: 300px;
+}
+.grid-teclado {
+	grid-column: span 2;
+	width: 100%;
+}
+.grid-imagem {
+	margin-top: 0;
+}
+.grid-imagem h1 {
+	font-size: 40px;
 }
 
+.palavra, .teclado {
+	border: 1px solid green;
+	width: 100%;
+	height: 50%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.tablela-teclado * div {
+	font-size: 30px;
+	letter-spacing: 4px;
+	border-radius: 5px;
+	border: 1px solid red;
+	padding: .15em;
+	margin: .15em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Exo 2', sans-serif;
+	background-color: rgba(var(--cor-global),0.1);
+	border:  1px solid rgba(var(--cor-global),1.0);
+	color: rgba(var(--cor-global),1.0);
+}
+
+.btn {
+	height: 40px;
+}
+
+.btnJogoJogar {
+	background-color: rgba(var(--cor-global),1.0);
+	border:  2px solid rgba(var(--cor-global),1.0);
+	color: #f2f2f2;
+}
+.btnJogoSair {
+	background-color: rgba(var(--cor-global),0.1);
+	border:  2px solid rgba(var(--cor-global),1.0);
+	color: rgba(var(--cor-global),1.0);
+}
+
+/*----------------------------------------------------------------------*/
+/*MEDIA QUERIES*/
+/*----------------------------------------------------------------------*/
+/* DESKTOP  */
+@media only screen and (min-width: 769px) {
+/*GRID-CONTAINER	*/
 .grid-container {
-	min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 80px 2fr 1fr 80px;
-  grid-template-areas: "navbar" "canvas" "palavras" "botoes";
-}
-
+	  grid-template-columns: 1fr 1fr;
+	  grid-template-rows: 60px 2fr 200px 60px 25px;
+}	
+/*GRID NAVBAR*/
 .grid-navbar {
-	grid-area: navbar;
-	background-color: tomato;
+	grid-column: span 2;
+}
+/*GRID IMAGEM*/
+.grid-imagem {
+	grid-column: span 2;
 }
 
-.grid-canvas {
-	grid-area: canvas;
-	background-color: purple;
+.grid-btn1 {
+    grid-column: ;grid-row-start: 4;
+	align-items: center;
+	justify-content: flex-end;
+	margin-right: 1em;
+}
+.grid-btn2 {	
+	grid-column-start: 2;
+	grid-row-start: 4;
+	align-items: center;
+	justify-content: flex-start;
+	margin-left: 1em;
 }
 
-.grid-palavras {
-	grid-area: palavras;
-	background-color: aliceblue;
+
+}
+/*----------------------------------------------------------------------*/
+/* TABLET */
+/*----------------------------------------------------------------------*/
+@media only screen and (min-width: 481px) and (max-width:768px) {
+.grid-container {
+	  grid-template-columns: 1fr 1fr;
+	  grid-template-rows: 60px 2fr 200px 60px 25px;
+}	
+.canvas {
+	width: 350px;
+	height: 300px;
+}
+/*GRID NAVBAR*/
+.grid-navbar {
+	grid-column: span 2;
+}
+/*GRID IMAGEM*/
+.grid-imagem {
+	grid-column: span 2;
 }
 
-.grid-botoes {
-	grid-area: botoes;
-	background-color: seagreen;
+.grid-btn1 {
+    grid-column: ;grid-row-start: 4;
+	align-items: center;
+	justify-content: flex-end;
+	margin-right: .5em;
+}
+.grid-btn2 {	
+	grid-column-start: 2;
+	grid-row-start: 4;
+	align-items: center;
+	justify-content: flex-start;
+	margin-left: .5em;
+}	
+.input {
+	width: 400px;
+}
+.grid-imagem h1 {
+	font-size: 40px;
+	letter-spacing: 2px;
+}
+.btnJogoJogar {
+	width: 200px;
+}
+.btnJogoSair {
+	width: 200px;
+}
+
+
+/*-------------*/
+}
+
+/*----------------------------------------------------------------------*/
+/* CELPHONE */
+/*----------------------------------------------------------------------*/
+@media only screen and (max-width: 480px) {
+.grid-container {
+  grid-template-rows: 60px 1fr 150px 40px 40px 15px;
+}	
+.canvas {
+	width: 300px;
+	height: 250px;
+}
+.btn {
+	height: 30px;
+}
+.grid-btn1 {
+	margin-top: 10px;
+	grid-row-start: 4;
+	height: 30px;
+}
+.grid-btn2 {	
+	margin-top: 5px;
+	grid-row-start: 5;
+	height: 30px;
+}		
+.input {
+	width: 300px;
+}
+.grid-imagem h1 {
+	font-size: 40px;
+	letter-spacing: 2px;
+}
+
+.tablela-teclado * div {
+	font-size: 19px;
+	letter-spacing: 0;
+
+}
+
+
+
+/*---------*/
 }

@@ -35,7 +35,7 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 90px 2fr 80px 80px 100px;
+  grid-template-rows: 60px 2fr 80px 80px 100px;
   grid-template-areas: "navbar" "imagem" "btn1" "btn2" "footer";
 }
 /*---NAVBAR---*/
@@ -47,9 +47,8 @@ body {
 /*---ICONES---*/
 #ico-logo {
 	padding: 0.25em;
-	margin: 0.5em;
-	width: 4em;
-	height: 4em;
+	width: 3em;
+	height: auto;
 	border-radius: 50%;
 }
 #ico-dark, 
@@ -157,7 +156,7 @@ body {
 	transition: 0.25s transform;
 	transition: 0.25s box-shadow;
 	width: 250px;
-	height: 60px;
+	height: 45px;
 }
 .btn:hover {
 	/*transform: scale(1.1);*/
