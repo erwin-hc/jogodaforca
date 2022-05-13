@@ -1,0 +1,56 @@
+.input {
+	display: block;
+	width: 500px;
+	letter-spacing: 3px;
+	padding: .5em;
+	margin: 2em .5em 2em .5em;
+	text-transform: uppercase;
+	line-height: 2;
+
+	background-color: rgba(var(--cor-global),0.1);
+	border:  2px solid rgba(var(--cor-global),1.0);
+	color: rgba(var(--cor-global),1.0);
+}
+
+.btnPalavraSalvar {
+	background-color: rgba(var(--cor-global),1.0);
+	border:  2px solid rgba(var(--cor-global),1.0);
+	color: #f2f2f2;
+}
+.btnPalavraSair {
+	background-color: rgba(var(--cor-global),0.1);
+	border:  2px solid rgba(var(--cor-global),1.0);
+	color: rgba(var(--cor-global),1.0);
+}
+
+/*----------------------------------------------------------------------*/
+/*MEDIA QUERIES*/
+/*----------------------------------------------------------------------*/
+/* DESKTOP  */
+@media only screen and (min-width: 769px) {
+
+}
+/*----------------------------------------------------------------------*/
+/* TABLET */
+/*----------------------------------------------------------------------*/
+@media only screen and (min-width: 481px) and (max-width:768px) {
+.input {
+	width: 400px;
+}
+.grid-imagem h1 {
+	font-size: 40px;
+	letter-spacing: 2px;
+}
+}
+/*----------------------------------------------------------------------*/
+/* CELPHONE */
+/*----------------------------------------------------------------------*/
+@media only screen and (max-width: 480px) {
+.input {
+	width: 300px;
+}
+.grid-imagem h1 {
+	font-size: 40px;
+	letter-spacing: 2px;
+}
+}

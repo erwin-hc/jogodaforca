@@ -2,12 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&display=swap');
 :root {
   --cor-global: 92,122,255;	
+  --bg-global: 242,242,242;
+  --cor-svg-global: var(--SVG-AZUL);
 
   --cor-azul: 92,122,255; /*AZUL - 5c7aff */
   --cor-verde: 3,181,170; /*VERDE - 03b5aa */
   --cor-vermelho: 251,80,18; /*VERMELHO - fb5012 */
 
-  --bg-dark: 28,28,28;
+  --bg-dark: 30,30,30;
 
   --SVG-AZUL: invert(50%) sepia(37%) saturate(5876%) hue-rotate(213deg) brightness(101%) contrast(101%);
   --SVG-VERDE: invert(49%) sepia(87%) saturate(471%) hue-rotate(127deg) brightness(94%) contrast(98%);
@@ -17,7 +19,7 @@
 body {
 	font-family: 'Poppins',sans-serif;
 	/*LIGHT*/
-	background-color: rgba(var(--cor-global),0.1); 
+	background-color: rgba(var(--bg-global),1); 
 	/*DARK*/
 	/*background-color: rgba(var(--bg-dark),1); */
 }
@@ -33,12 +35,14 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 90px 2fr 80px 100px;
-  grid-template-areas: "navbar" "imagem" "btn1" "btn2";
+  grid-template-rows: 90px 2fr 80px 80px 100px;
+  grid-template-areas: "navbar" "imagem" "btn1" "btn2" "footer";
 }
 /*---NAVBAR---*/
 .grid-navbar {
 	grid-area: navbar;
+	background-color: rgba(var(--cor-global),0.3);
+	border:  2px solid rgba(var(--cor-global),0.3);
 }
 /*---ICONES---*/
 #ico-logo {
@@ -60,6 +64,9 @@ body {
 	width: 3.5em;
 }
 /*---CORES ICONES---*/
+.svg-global {
+	filter:  var(--cor-svg-global);
+}
 .svg-azul {
 	filter: var(--SVG-AZUL);
 }
@@ -78,10 +85,11 @@ body {
 	height: 250px;
 	z-index: 2;
 	border-radius: 25px;
-	background-color: rgba(var(--bg-global),1.0);
+	background-color: rgba(var(--bg-global),1);
 	border: 3px solid rgba(var(--cor-global),1.0);
 }
 .modal-ln1 {
+	margin-top: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -111,8 +119,9 @@ body {
 	grid-area: imagem;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
+	margin-top: 35px;
 
 }
 .grid-imagem h1 {
@@ -148,24 +157,26 @@ body {
 	transition: 0.25s transform;
 	transition: 0.25s box-shadow;
 	width: 250px;
-	height: 50px;
+	height: 60px;
 }
 .btn:hover {
 	/*transform: scale(1.1);*/
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-.btn-1 {
+.btnInicioJogar {
 	background-color: rgba(var(--cor-global),1.0);
 	border:  2px solid rgba(var(--cor-global),1.0);
 	color: #f2f2f2;
 }
-.btn-2 {
+.btnInicioCriar {
 	background-color: rgba(var(--cor-global),0.1);
 	border:  2px solid rgba(var(--cor-global),1.0);
 	color: rgba(var(--cor-global),1.0);
-
 }
 
+.grid-footer {
+	grid-area: footer;
+}
 
 
 /*----------------------------------------------------------------------*/
@@ -190,8 +201,8 @@ body {
 	height: auto;
 }
 .grid-imagem h1 {
-	font-size: 30px;
-	letter-spacing: 4px;
+	font-size: 40px;
+	letter-spacing: 2px;
 }
 
 }
