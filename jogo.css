@@ -1,3 +1,16 @@
+.titulo {
+	font-size: 28px;
+	letter-spacing: 2px;
+	color: rgba(var(--cor-global),1.0);
+	padding: 0.15em;
+	text-align: center;
+	font-family: 'Exo 2', sans-serif;
+}
+span {
+	font-size: 22px;
+	vertical-align: text-top;
+}
+
 .canvas {
 	border: 1px solid green;
 	width: 350px;
@@ -6,26 +19,41 @@
 .grid-teclado {
 	grid-column: span 2;
 	width: 100%;
+	height: 100%;
 }
 .grid-imagem {
 	margin-top: 0;
 }
-.grid-imagem h1 {
-	font-size: 40px;
+
+
+.palavra {
+	width: 100%;
+	height: 65px;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: center;
+}
+.palavra div {
+	font-size: 30px;
+	padding: .15em;
+	margin: .15em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Exo 2', sans-serif;
+	border-bottom: 3px solid rgba(var(--cor-global),1.0);
+	color: rgba(var(--cor-global),1.0);
 }
 
-.palavra, .teclado {
-	border: 1px solid green;
+.teclado {
 	width: 100%;
-	height: 50%;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.tablela-teclado * div {
+.tablela-teclado div {
 	font-size: 30px;
-	letter-spacing: 4px;
 	border-radius: 5px;
 	border: 1px solid red;
 	padding: .15em;
@@ -62,7 +90,7 @@
 /*GRID-CONTAINER	*/
 .grid-container {
 	  grid-template-columns: 1fr 1fr;
-	  grid-template-rows: 60px 2fr 200px 60px 25px;
+	  grid-template-rows: 60px 2fr 150px 60px 5px;
 }	
 /*GRID NAVBAR*/
 .grid-navbar {
@@ -86,6 +114,11 @@
 	justify-content: flex-start;
 	margin-left: 1em;
 }
+.tablela-teclado div {
+	font-size: 30px;
+	width: 35px;
+	padding: 0.10em;
+}
 
 
 }
@@ -93,9 +126,12 @@
 /* TABLET */
 /*----------------------------------------------------------------------*/
 @media only screen and (min-width: 481px) and (max-width:768px) {
+.grid-imagem h1 {
+	font-size: 24px;	
+}		
 .grid-container {
 	  grid-template-columns: 1fr 1fr;
-	  grid-template-rows: 60px 2fr 200px 60px 25px;
+	  grid-template-rows: 60px 2fr 150px 60px 5px;
 }	
 .canvas {
 	width: 350px;
@@ -126,15 +162,17 @@
 .input {
 	width: 400px;
 }
-.grid-imagem h1 {
-	font-size: 40px;
-	letter-spacing: 2px;
-}
 .btnJogoJogar {
 	width: 200px;
 }
 .btnJogoSair {
 	width: 200px;
+}
+.tablela-teclado div {
+	font-size: 25px;
+
+	width: 32px;
+	padding: 0.10em;
 }
 
 
@@ -145,8 +183,12 @@
 /* CELPHONE */
 /*----------------------------------------------------------------------*/
 @media only screen and (max-width: 480px) {
+.grid-imagem h1 {
+	font-size: 18px;	
+}	
+
 .grid-container {
-  grid-template-rows: 60px 1fr 150px 40px 40px 15px;
+  grid-template-rows: 60px 1fr 120px 40px 40px 5px;
 }	
 .canvas {
 	width: 300px;
@@ -168,15 +210,17 @@
 .input {
 	width: 300px;
 }
-.grid-imagem h1 {
-	font-size: 40px;
-	letter-spacing: 2px;
+
+.tablela-teclado div {
+	font-size: 20px;
+	width: 22px;
+	height: 25px;
+	padding: 0.10em;
 }
 
-.tablela-teclado * div {
-	font-size: 19px;
-	letter-spacing: 0;
-
+.palavra-secreta {
+	height: 50px;
+	border-bottom: 2px solid blac;
 }
 
 

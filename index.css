@@ -35,7 +35,7 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 60px 2fr 80px 80px 100px;
+  grid-template-rows: 60px 2fr 60px 60px 25px;
   grid-template-areas: "navbar" "imagem" "btn1" "btn2" "footer";
 }
 /*---NAVBAR---*/
@@ -123,7 +123,7 @@ body {
 	margin-top: 35px;
 
 }
-.grid-imagem h1 {
+.titulo-inicio {
 	font-size: 50px;
 	letter-spacing: 8px;
 	color: rgba(var(--cor-global),1.0);
@@ -189,17 +189,26 @@ body {
 /* TABLET */
 /*----------------------------------------------------------------------*/
 @media only screen and (min-width: 481px) and (max-width:768px) {
+.grid-container {
+  grid-template-rows: 60px 2fr 60px 60px 25px; 
+}
+
+
 
 }
 /*----------------------------------------------------------------------*/
 /* CELPHONE */
 /*----------------------------------------------------------------------*/
 @media only screen and (max-width: 480px) {
+.grid-container {
+  grid-template-rows: 60px 2fr 60px 60px 5px; 
+}
+
 #img-inicio {
 	width: 350px;
 	height: auto;
 }
-.grid-imagem h1 {
+.titulo-inicio {
 	font-size: 40px;
 	letter-spacing: 2px;
 }

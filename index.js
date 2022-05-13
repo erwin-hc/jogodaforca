@@ -17,7 +17,6 @@ container.forEach(function (item, idx) {
     });
 });
 
-window.onload = functionAddAttribute;
 // SELETORES E CORES THEMA
 var cor_azul = document.getElementById('cor_azul');
 var cor_vermelho = document.getElementById('cor_vermelho');
@@ -40,6 +39,7 @@ var corPadrao = sessionStorage.getItem('corPadrao');
 var bgPadrao = sessionStorage.getItem('bgPadrao');
 var svgPadrao = sessionStorage.getItem('svgPadrao');
 
+window.onload = functionAddAttribute;
 // ONLOAD ATRIBUTE
 function functionAddAttribute(){
     document.documentElement.style.setProperty("--bg-global", bgPadrao);
