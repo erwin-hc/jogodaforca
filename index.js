@@ -97,3 +97,4 @@ cor_vermelho.addEventListener("click", function() {
     icones_svg[i].classList.add('svg-vermelho');
     }
 });
+

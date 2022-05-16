@@ -4,8 +4,9 @@ var inputPalavra = document.querySelector(".inputPalavra");
 var inputGrupo = document.querySelector(".inputGrupo");
 var inputDica = document.querySelector(".inputDica");
 
+
 salvarBtn.addEventListener("click", function(e){
-	// e.preventDefault();
+	e.preventDefault();
 	
 	if (inputPalavra.value == "") {
 		inputPalavra.focus();
@@ -19,16 +20,15 @@ salvarBtn.addEventListener("click", function(e){
 		sessionStorage.setItem("palavra", inputPalavra.value.toUpperCase());
 		sessionStorage.setItem("grupo", inputGrupo.value.toUpperCase());
 		sessionStorage.setItem("dica", inputDica.value.toUpperCase());
-
+		sessionStorage.setItem("aleatorio", "NAO");
+		window.location.href = "jogo.html";
 		inputPalavra.value = "";
 		inputGrupo.value = "";
 		inputDica.value = "";			
 	}	
 
-
-
 });
 
-	
+
 
 
