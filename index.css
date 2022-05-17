@@ -32,7 +32,7 @@ body {
 
 /*---CONTAINER---*/
 .grid-container {
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 60px 2fr 60px 60px 25px;
@@ -118,7 +118,7 @@ body {
 	grid-area: imagem;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 
 }
