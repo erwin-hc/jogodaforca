@@ -6,7 +6,6 @@
 	margin: 2em .5em 2em .5em;
 	text-transform: uppercase;
 	line-height: 2;
-
 	background-color: rgba(var(--cor-global),0.1);
 	border:  2px solid rgba(var(--cor-global),1.0);
 	color: rgba(var(--cor-global),1.0);

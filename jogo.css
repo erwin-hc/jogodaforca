@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 .titulo {
 	font-size: 28px;
 	letter-spacing: 2px;
 	color: rgba(var(--cor-global),1.0);
 	padding: 0.15em;
 	text-align: center;
-	font-family: 'Exo 2', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 }
 span {
-	font-size: 22px;
+	font-size: 16px;
 	vertical-align: text-top;
 }
 
@@ -17,18 +19,21 @@ span {
 	height: 300px;
 }
 .grid-teclado {
+	margin-top: .5em;
 	grid-column: span 2;
 	width: 100%;
 	height: 100%;
 }
 
 .palavra {
-	width: 100%;
+	padding: .25em;
+	/*width: 100%;*/
 	height: 65px;
 	display: flex;
 	flex-direction: row;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: center;
+
 }
 .palavra div {
 	font-size: 30px;
@@ -38,8 +43,13 @@ span {
 	align-items: center;
 	justify-content: center;
 	font-family: 'Exo 2', sans-serif;
+	/*font-family: 'Ubuntu', sans-serif;*/
 	border-bottom: 3px solid rgba(var(--cor-global),1.0);
 	color: rgba(var(--cor-global),1.0);
+}
+.letras {
+	font-weight: bold;
+	/*font-family: 'Roboto', sans-serif;*/
 }
 
 .teclado {
@@ -47,18 +57,16 @@ span {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	font-family: 'Ubuntu', sans-serif;
 }
 .tablela-teclado div {
 	font-size: 30px;
 	border-radius: 5px;
-	border: 1px solid red;
 	padding: .15em;
 	margin: .15em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-family: 'Exo 2', sans-serif;
-	background-color: rgba(var(--cor-global),0.1);
 	border:  1px solid rgba(var(--cor-global),1.0);
 	color: rgba(var(--cor-global),1.0);
 }
@@ -215,7 +223,7 @@ span {
 }
 
 .palavra-secreta {
-	height: 50px;
+	height: 40px;
 	border-bottom: 2px solid blac;
 }
 

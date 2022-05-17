@@ -7,13 +7,13 @@
 
   --cor-azul: 92,122,255; /*AZUL - 5c7aff */
   --cor-verde: 3,181,170; /*VERDE - 03b5aa */
-  --cor-vermelho: 251,80,18; /*VERMELHO - fb5012 */
+  --cor-vermelho: 231,111,81; /*VERMELHO - fb5012 */
 
   --bg-dark: 30,30,30;
 
   --SVG-AZUL: invert(50%) sepia(37%) saturate(5876%) hue-rotate(213deg) brightness(101%) contrast(101%);
   --SVG-VERDE: invert(49%) sepia(87%) saturate(471%) hue-rotate(127deg) brightness(94%) contrast(98%);
-  --SVG-VERMELHO: invert(41%) sepia(68%) saturate(4148%) hue-rotate(354deg) brightness(100%) contrast(98%);
+  --SVG-VERMELHO: invert(53%) sepia(99%) saturate(1810%) hue-rotate(330deg) brightness(99%) contrast(82%);
 }
 
 body {
@@ -118,7 +118,7 @@ body {
 	grid-area: imagem;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
 
 }
@@ -161,12 +161,12 @@ body {
 	/*transform: scale(1.1);*/
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-.btnInicioJogar {
+#btnIndexAleatorio {
 	background-color: rgba(var(--cor-global),1.0);
 	border:  2px solid rgba(var(--cor-global),1.0);
 	color: #f2f2f2;
 }
-.btnInicioCriar {
+#btnIndexCriar {
 	background-color: rgba(var(--cor-global),0.1);
 	border:  2px solid rgba(var(--cor-global),1.0);
 	color: rgba(var(--cor-global),1.0);

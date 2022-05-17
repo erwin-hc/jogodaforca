@@ -28,11 +28,11 @@ var bgDark = "30,30,30";
 
 var corAzul ="92,122,255"; /*AZUL - 5c7aff */
 var corVerde = "3,181,170"; /*VERDE - 03b5aa */
-var corVermelho = "251,80,18"; /*VERMELHO - fb5012 */
+var corVermelho = "231,111,81"; /*VERMELHO - e76f51 */
 
-var SVGAZUL = "invert(50%) sepia(37%) saturate(5876%) hue-rotate(213deg) brightness(101%) contrast(101%)";
+var SVGAZUL ="invert(50%) sepia(37%) saturate(5876%) hue-rotate(213deg) brightness(101%) contrast(101%)";
 var SVGVERDE ="invert(49%) sepia(87%) saturate(471%) hue-rotate(127deg) brightness(94%) contrast(98%)";
-var SVGVERMELHO = "invert(41%) sepia(68%) saturate(4148%) hue-rotate(354deg) brightness(100%) contrast(98%)";
+var SVGVERMELHO ="invert(53%) sepia(99%) saturate(1810%) hue-rotate(330deg) brightness(99%) contrast(82%)";
 
 
 var corPadrao = sessionStorage.getItem('corPadrao');
@@ -98,3 +98,16 @@ cor_vermelho.addEventListener("click", function() {
     }
 });
 
+
+var btnAleatorio = document.querySelector("#btnIndexAleatorio");
+var btnCriar = document.querySelector("#btnIndexCriar");
+
+btnAleatorio.addEventListener("click", function() {
+    sessionStorage.setItem("aleatorio", "SIM");
+    window.location.href = "jogo.html";
+});
+
+btnCriar.addEventListener("click", function() {
+    sessionStorage.setItem("aleatorio", "NAO");
+    window.location.href = "palavra.html";
+});
