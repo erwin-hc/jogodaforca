@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 .titulo {
+	margin-top: .25em;
 	font-size: 28px;
 	letter-spacing: 2px;
 	color: rgba(var(--cor-global),1.0);
 	padding: 0.15em;
 	text-align: center;
 	font-family: 'Ubuntu', sans-serif;
+	margin-bottom: .25em;
 }
 span {
 	font-size: 16px;
@@ -36,7 +38,8 @@ span {
 
 }
 .palavra div {
-	font-size: 30px;
+		height: 40px;
+	font-size: 28px;
 	padding: .15em;
 	margin: .15em;
 	display: flex;
@@ -60,6 +63,7 @@ span {
 	font-family: 'Ubuntu', sans-serif;
 }
 .tablela-teclado div {
+
 	font-size: 30px;
 	border-radius: 5px;
 	padding: .15em;
@@ -70,17 +74,23 @@ span {
 	border:  1px solid rgba(var(--cor-global),1.0);
 	color: rgba(var(--cor-global),1.0);
 }
+.verde {
+	background-color: green;
+}
+.vermelho {
+	background-color: red;
+}
 
 .btn {
 	height: 40px;
 }
 
-.btnJogoJogar {
+#btnJogoNovo {
 	background-color: rgba(var(--cor-global),1.0);
 	border:  2px solid rgba(var(--cor-global),1.0);
 	color: #f2f2f2;
 }
-.btnJogoSair {
+#btnJogoSair {
 	background-color: rgba(var(--cor-global),0.1);
 	border:  2px solid rgba(var(--cor-global),1.0);
 	color: rgba(var(--cor-global),1.0);
@@ -94,7 +104,7 @@ span {
 /*GRID-CONTAINER	*/
 .grid-container {
 	  grid-template-columns: 1fr 1fr;
-	  grid-template-rows: 60px 2fr 150px 60px 5px;
+	  grid-template-rows: 60px 2fr 130px 60px 5px;
 }	
 /*GRID NAVBAR*/
 .grid-navbar {
@@ -119,7 +129,7 @@ span {
 	margin-left: 1em;
 }
 .tablela-teclado div {
-	font-size: 30px;
+	font-size: 25px;
 	width: 35px;
 	padding: 0.10em;
 }
@@ -135,7 +145,7 @@ span {
 }		
 .grid-container {
 	  grid-template-columns: 1fr 1fr;
-	  grid-template-rows: 60px 2fr 150px 60px 5px;
+	  grid-template-rows: 60px 2fr 130px 60px 5px;
 }	
 .canvas {
 	width: 350px;
@@ -166,10 +176,10 @@ span {
 .input {
 	width: 400px;
 }
-.btnJogoJogar {
+#btnJogoNovo {
 	width: 200px;
 }
-.btnJogoSair {
+#btnJogoSair {
 	width: 200px;
 }
 .tablela-teclado div {

@@ -7,33 +7,8 @@ var tituloGrupo = document.querySelector(".grupo");
 var tituloDica = document.querySelector(".dica");
 var divPalavra = document.querySelector(".palavra");
 
-var palavraAleatoria = "PALAVRA ALEATORIA";
-
-
-
-if (aleatorio == "NAO") {
-	tituloGrupo.innerHTML = "Grupo: " + grupo;
-	tituloDica.innerHTML = "Dica: " + dica;
-	separaPalavra(palavra);	
-} else {
-	tituloGrupo.innerHTML = "Grupo: " + "GERAL";
-	tituloDica.innerHTML = "Dica: " + "USAMOS NA ESCRITA";
-	separaPalavra(palavraAleatoria);
-}
-
-// FUNCAO PRA SEPARAR A PALAVRA E COLOCAR NAS DIVS
-function separaPalavra(palavraSecreta) {
-	var arrayPalavra = palavraSecreta.split("");
-	for (var i=0; i < arrayPalavra.length; i++) {
-	divPalavra.innerHTML += "<div class='letras'>"+arrayPalavra[i]+"</div>";
-	}
-};
-
-
-var objPalavrasAleatorias = {
-////////////////////////////////////////
-// OBJETOS
-////////////////////////////////////////
+// JSON COM 20 PALAVRAS PARA PEGAR NO ALEATORIO
+var objPalavrasAleatorias = [
 	{
 		palavra: "lampada",
 		grupo: "objeto",
@@ -50,18 +25,15 @@ var objPalavrasAleatorias = {
 		dica: "qualidade de vida"
 	},
 	{
-		palavra: "guarda chuva",
+		palavra: "forno",
 		grupo: "objeto",
-		dica: "mantém você seco"
+		dica: "para cozinhar"
 	},
 	{
 		palavra: "ventilador",
 		grupo: "objeto",
-		dica: "mantém você fresco"
+		dica: "verão"
 	},
-////////////////////////////////////////
-// BEBIDAS
-////////////////////////////////////////
 	{
 		palavra: "cerveja",
 		grupo: "bebida",
@@ -70,10 +42,10 @@ var objPalavrasAleatorias = {
 		{
 		palavra: "whisky",
 		grupo: "bebida",
-		dica: "conhecido como scotch"
+		dica: "scotch"
 	},
 		{
-		palavra: "refrigerante",
+		palavra: "limonada",
 		grupo: "bebida",
 		dica: "toda criança gosta"
 	},
@@ -85,11 +57,8 @@ var objPalavrasAleatorias = {
 		{
 		palavra: "vinho",
 		grupo: "bebida",
-		dica: "tá até na biblia"
+		dica: "biblia"
 	},
-////////////////////////////////////////
-// MUSICA
-////////////////////////////////////////
 	{
 		palavra: "metallica",
 		grupo: "musica",
@@ -115,11 +84,8 @@ var objPalavrasAleatorias = {
 		grupo: "musica",
 		dica: "banda punk"
 	},
-////////////////////////////////////////
-// FILME
-////////////////////////////////////////
 	{
-		palavra: "o exorcista",
+		palavra: "exorcista",
 		grupo: "filme",
 		dica: "classico de terror"
 	},
@@ -141,7 +107,76 @@ var objPalavrasAleatorias = {
 	{
 		palavra: "nosferatu",
 		grupo: "filme",
-		dica: "filme alemão vampiros"
+		dica: "filme vampiros"
+	},
+	{
+		palavra: "alura",
+		grupo: "cursos",
+		dica: "internet"
 	},
 
+];
+
+// SE VARIAVEL ALEATORIO FOR NAO PEGA OS VALORES DOS IMPTUS
+if (aleatorio == "NAO") {
+	tituloGrupo.innerHTML = "GRUPO: " + grupo;
+	tituloDica.innerHTML = "DICA: " + dica;
+	separaPalavra(palavra);	
+// SE VARIAVEL ALEATORIO FOR SIM PEGA DO JSON ALEATORIAMENTE
+} else {
+	// INDICE ARRAY ALEATORIO
+	var ia = Math.floor(Math.random() * objPalavrasAleatorias.length);
+	var palavraAleatoria = objPalavrasAleatorias[ia]['palavra'].toUpperCase();
+	var grupoAleatorio = objPalavrasAleatorias[ia]['grupo'].toUpperCase();
+	var dicaAleatoria = objPalavrasAleatorias[ia]['dica'].toUpperCase();
+
+	tituloGrupo.innerHTML = "GRUPO: " + grupoAleatorio;
+	tituloDica.innerHTML = "DICA: " + dicaAleatoria;
+	separaPalavra(palavraAleatoria);
 }
+
+// FUNCAO PRA SEPARAR A PALAVRA E COLOCAR NAS DIV'S
+function separaPalavra(palavraSecreta) {
+	var arrayPalavra = palavraSecreta.split("");
+	for (var i=0; i < arrayPalavra.length; i++) {
+	divPalavra.innerHTML += "<div class='letras'><h1>"+arrayPalavra[i]+"</h1></div>";
+	}
+};
+
+// BOTAO NOVO JOGO SETA VARIAVEL PARA ALEATORIO
+var btnJogoNovo = document.querySelector("#btnJogoNovo");
+btnJogoNovo.addEventListener("click", function () {
+	sessionStorage.setItem("aleatorio", "SIM");
+});
+
+// VERIFICA VALORES DAS DIV'S TECLADO
+var divTeclado = document.querySelector(".teclado");
+var divTeclas = divTeclado.querySelectorAll("div");
+var divPalavra = document.querySelector(".palavra");
+
+console.log(divPalavra)
+
+divTeclas.forEach(function (item) {
+    item.addEventListener('click', function (e) {
+
+    	if (aleatorio == 'SIM') {
+        	var palavraSecreta = palavraAleatoria;
+    	} else {
+    		var palavraSecreta = palavra;
+    	}
+
+    	var arrayPalavraSecreta = palavraSecreta.split("");
+    	var tecla = e.target.textContent;
+    	arrayPalavraSecreta.forEach(function (letra) {
+    		// CONFERE TECLA COM LETRAS
+    		if (letra == tecla) {
+    			alert("tem")
+    		} else {
+    			alert("nao")
+
+    		}
+    	})
+
+    });
+});
+

@@ -3,27 +3,37 @@
 	width: 500px;
 	letter-spacing: 3px;
 	padding: .5em;
-	margin: 2em .5em 2em .5em;
 	text-transform: uppercase;
 	line-height: 2;
 	background-color: rgba(var(--cor-global),0.1);
 	border:  2px solid rgba(var(--cor-global),1.0);
 	color: rgba(var(--cor-global),1.0);
+	margin-top: 2em;
+	margin-bottom: .25em;
 }
 
-.btnPalavraSalvar {
+.label {
+	color: rgba(var(--cor-global),1.0);
+	letter-spacing: 4px;
+	padding: .5em;
+	font-size: 12px;
+
+}
+
+#btnPalavraSalvar {
 	background-color: rgba(var(--cor-global),1.0);
 	border:  2px solid rgba(var(--cor-global),1.0);
 	color: #f2f2f2;
 }
-.btnPalavraSair {
+#btnPalavraSair {
 	background-color: rgba(var(--cor-global),0.1);
 	border:  2px solid rgba(var(--cor-global),1.0);
 	color: rgba(var(--cor-global),1.0);
 }
 .titulo-palavra {
-	font-size: 50px;
-	letter-spacing: 8px;
+	font-size: 30px;
+	letter-spacing: 6px;
+	line-height: 1.5;
 	color: rgba(var(--cor-global),1.0);
 	padding: 0.15em;
 	text-align: center;
@@ -44,10 +54,7 @@
 .input {
 	width: 400px;
 }
-.titulo-palavra {
-	font-size: 40px;
-	letter-spacing: 2px;
-}
+
 }
 /*----------------------------------------------------------------------*/
 /* CELPHONE */
@@ -56,8 +63,6 @@
 .input {
 	width: 300px;
 }
-.titulo-palavra {
-	font-size: 40px;
-	letter-spacing: 2px;
-}
+
+
 }

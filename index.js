@@ -98,7 +98,6 @@ cor_vermelho.addEventListener("click", function() {
     }
 });
 
-
 var btnAleatorio = document.querySelector("#btnIndexAleatorio");
 var btnCriar = document.querySelector("#btnIndexCriar");
 

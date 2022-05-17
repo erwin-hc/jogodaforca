@@ -43,26 +43,32 @@
 			<h1 class="titulo-palavra">CRIAR PALAVRA</h1>
 			<form>
 				<fieldset>
-					<input class="input inputPalavra" type="text" placeholder="PALAVRA SECRETA" required>
-					<input class="input inputGrupo" type="text" placeholder="GRUPO :: (ex: FILME, ATOR, etc)" required>
-					<input class="input inputDica" type="text" placeholder="DICA :: (ex: FILME SCIFI, FEZ TAL FILME, etc)" required>					
+					<input class="input inputPalavra" type="text" placeholder="PALAVRA SECRETA" maxlength="10" required>
+					<label class="label" >Máximo 10 Letras</label>
+					<input class="input inputGrupo" type="text" placeholder="GRUPO :: (ex: FILME, ATOR, etc)" maxlength="18" required>
+					<label class="label" >Máximo 18 Letras</label>
+					<input class="input inputDica" type="text" placeholder="DICA :: (ex: FILME AÇÃO, etc)" maxlength="18" required>					
+					<label class="label" >Máximo 18 Letras</label>
 				</fieldset>
 			</form>
 		</div>
 		<!-- ---BOTAO ALEATORIO--- -->
 		<div class="aux-modal grid-btn grid-btn1">
-			<div class="div-botoes div-btn-1"> <button type="button" id="btnPalavraSalvar" class="btn btnPalavraSalvar">SALVAR E JOGAR</button>  </div>	
-
+			<div class="div-botoes div-btn-1"> 
+				<button type="button" id="btnPalavraSalvar" class="btn">SALVAR E JOGAR</button> 
+			</div>	
 		</div>
 		<!-- ---BOTAO CRIAR--- -->
 		<div class="aux-modal grid-btn grid-btn2">
-			<div class="div-botoes div-btn-2"> <a href="index.html"> <button type="button" id="btnPalavraSair"class="btn btnPalavraSair">SAIR </button> </a> </div>
+			<div class="div-botoes div-btn-2"> 
+				<a href="index.html"> <button type="button" id="btnPalavraSair" class="btn">SAIR </button> </a> 
+			</div>
 		</div>
 	</div>
 	<!-- --- FOOTER --- -->
 	<div class="aux-modal grid-footer"></div>
 
-<script type="text/javascript" src="index.js"></script>
-<script type="text/javascript" src="palavra.js"></script>
+<script defer type="text/javascript" src="index.js"></script>
+<script defer type="text/javascript" src="palavra.js"></script>
 </body>
 </html>
