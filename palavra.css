@@ -40,6 +40,26 @@
 	font-family: 'Exo 2', sans-serif;
 }
 
+.grid-imagem-palavra {
+	grid-area: imagem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+}
+
+.btnPalavra {
+	font-family: "Poppins",sans-serif;
+	border-radius: 25px;
+	padding: .15em;
+	transition: 0.25s transform;
+	transition: 0.25s box-shadow;
+	width: 250px;
+	height: 40px;
+
+}
+
 /*----------------------------------------------------------------------*/
 /*MEDIA QUERIES*/
 /*----------------------------------------------------------------------*/

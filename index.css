@@ -32,7 +32,7 @@ body {
 
 /*---CONTAINER---*/
 .grid-container {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 20px);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 60px 2fr 60px 60px 25px;

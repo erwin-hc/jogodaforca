@@ -17,10 +17,9 @@
 	font-family: 'Ubuntu', sans-serif;
 }
 
-.svg-boneco {
-	
+.svg-boneco {	
 	width: 350px;
-	height: 350px;
+	height: 300px;
 	fill: transparent;
 	stroke: rgba(var(--cor-global),1.0);
 	stroke-width: 6px;
@@ -38,11 +37,12 @@
 
 .palavra {
 	width: 100%;
-	height: 70px;
+	height: 50px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	font-family: 'Poppins',sans-serif;
 
 }
 .palavra div {
@@ -93,9 +93,17 @@
 	background-color: rgba(217,83,79,0.5);
 }
 
-.btn {
-	margin-bottom: 1em;
+.btnJogo {
+	font-family: "Poppins",sans-serif;
+	border-radius: 25px;
+	padding: .15em;
+	transition: 0.25s transform;
+	transition: 0.25s box-shadow;
+	width: 250px;
+	height: 40px;
+	margin-top: 2em;
 }
+
 
 #btnJogoNovo {
 	background-color: rgba(var(--cor-global),1.0);
@@ -107,6 +115,7 @@
 	border:  2px solid rgba(var(--cor-global),1.0);
 	color: rgba(var(--cor-global),1.0);
 }
+
 
 /*----------------------------------------------------------------------*/
 /*MEDIA QUERIES*/
@@ -220,22 +229,19 @@
 .grid-container {
   grid-template-rows: 60px 1fr 120px 40px 40px 5px;
 }	
-.canvas {
 
-}
-.btn {
-	margin-top: 1em;
-	height: auto;
+.btnJogo {
+	margin-top: .5em;
 }
 .grid-btn1 {
 	margin-top: 10px;
 	grid-row-start: 4;
-	height: 30px;
+
 }
 .grid-btn2 {	
-	margin-top: 5px;
+	margin-top: 10px;
 	grid-row-start: 5;
-	height: 30px;
+
 }		
 .input {
 	width: 300px;

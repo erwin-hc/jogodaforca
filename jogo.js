@@ -162,6 +162,7 @@ var auxBoneco = -1;
 console.log(auxBoneco)
 
 divTeclas.forEach(function (item) {
+
     item.addEventListener('click', function (e) {
 
     	if (aleatorio == 'SIM') {
@@ -175,14 +176,17 @@ divTeclas.forEach(function (item) {
     	// PINTA VERDE OU VERMELHO AS TECLAS
     	if (arrayPalavraSecreta.includes(tecla)) {
     		e.target.classList.add("verde");
+    		e.target.style.pointerEvents = "none";
+
     	} else {
     		e.target.classList.add("vermelho");
+    		e.target.style.pointerEvents = "none";
     		auxBoneco++;
     		bonecoSvg.children[auxBoneco].style.opacity = 1;
 
     		if (auxBoneco >8) {
     			alert("PERDEU PLAYBOY");
-    			return;
+
     		}
     	};
 
@@ -198,7 +202,7 @@ divTeclas.forEach(function (item) {
 				var tiraEspacoPalavra = arrayPalavraSecreta.filter(e => String(e).trim());
 				if (auxVenceu == tiraEspacoPalavra.length) {
 					alert("VENCEU");
-					return;
+
 				}
 			};
 		};
