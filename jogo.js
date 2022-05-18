@@ -50,7 +50,7 @@ var objPalavrasAleatorias = [
 		dica: "toda criança gosta"
 	},
 		{
-		palavra: "cachaça",
+		palavra: "pinga",
 		grupo: "bebida",
 		dica: "feita no brasil"
 	},
@@ -153,8 +153,13 @@ btnJogoNovo.addEventListener("click", function () {
 var divTeclado = document.querySelector(".teclado");
 var divTeclas = divTeclado.querySelectorAll("div");
 var divPalavra = document.querySelector(".palavra");
+var bonecoSvg = document.querySelector(".svg-boneco");
 
-console.log(divPalavra)
+// AUXILIAR PARA COMPARAR SE ACERTOU PALAVRA
+var auxVenceu = 0;
+var auxBoneco = -1;
+
+console.log(auxBoneco)
 
 divTeclas.forEach(function (item) {
     item.addEventListener('click', function (e) {
@@ -167,15 +172,37 @@ divTeclas.forEach(function (item) {
 
     	var arrayPalavraSecreta = palavraSecreta.split("");
     	var tecla = e.target.textContent;
-    	arrayPalavraSecreta.forEach(function (letra) {
-    		// CONFERE TECLA COM LETRAS
-    		if (letra == tecla) {
-    			alert("tem")
-    		} else {
-    			alert("nao")
+    	// PINTA VERDE OU VERMELHO AS TECLAS
+    	if (arrayPalavraSecreta.includes(tecla)) {
+    		e.target.classList.add("verde");
+    	} else {
+    		e.target.classList.add("vermelho");
+    		auxBoneco++;
+    		bonecoSvg.children[auxBoneco].style.opacity = 1;
 
+    		if (auxBoneco >8) {
+    			alert("PERDEU PLAYBOY");
+    			return;
     		}
-    	})
+    	};
+
+    	// MOSTRA LETRA 
+		for (var i=0;i<divPalavra.children.length;i++) {
+			
+			if (divPalavra.children[i].textContent == tecla) {
+
+				divPalavra.children[i].firstChild.style.opacity = 1;
+				auxVenceu++;
+
+				// APAGA ESPACOS DA PALAVRA 
+				var tiraEspacoPalavra = arrayPalavraSecreta.filter(e => String(e).trim());
+				if (auxVenceu == tiraEspacoPalavra.length) {
+					alert("VENCEU");
+					return;
+				}
+			};
+		};
+
 
     });
 });

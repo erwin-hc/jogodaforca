@@ -123,7 +123,7 @@ body {
 
 }
 .titulo-inicio {
-	font-size: 50px;
+	font-size: 35px;
 	letter-spacing: 8px;
 	color: rgba(var(--cor-global),1.0);
 	padding: 0.15em;
@@ -155,7 +155,8 @@ body {
 	transition: 0.25s transform;
 	transition: 0.25s box-shadow;
 	width: 250px;
-	height: 45px;
+	height: auto;
+	margin-bottom: 2em;
 }
 .btn:hover {
 	/*transform: scale(1.1);*/
@@ -208,7 +209,7 @@ body {
 	height: auto;
 }
 .titulo-inicio {
-	font-size: 40px;
+	font-size: 35px;
 	letter-spacing: 2px;
 }
 

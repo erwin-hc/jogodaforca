@@ -1,24 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
-.titulo {
-	margin-top: .25em;
+.div-titulo {
+	width: 100%;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.titulo {	
+	line-height: 1.2;
 	font-size: 28px;
 	letter-spacing: 2px;
 	color: rgba(var(--cor-global),1.0);
-	padding: 0.15em;
 	text-align: center;
 	font-family: 'Ubuntu', sans-serif;
-	margin-bottom: .25em;
-}
-span {
-	font-size: 16px;
-	vertical-align: text-top;
 }
 
-.canvas {
-	border: 1px solid green;
+.svg-boneco {
+	
 	width: 350px;
-	height: 300px;
+	height: 350px;
+	fill: transparent;
+	stroke: rgba(var(--cor-global),1.0);
+	stroke-width: 6px;
+	stroke-linecap: round;
+}
+.partes {
+	opacity: 0.0;
 }
 .grid-teclado {
 	margin-top: .5em;
@@ -28,9 +37,8 @@ span {
 }
 
 .palavra {
-	padding: .25em;
-	/*width: 100%;*/
-	height: 65px;
+	width: 100%;
+	height: 70px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -38,22 +46,20 @@ span {
 
 }
 .palavra div {
-		height: 40px;
-	font-size: 28px;
-	padding: .15em;
-	margin: .15em;
+	width: 20px;
+	padding: 1.5px;
+	margin: 3.5px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-family: 'Exo 2', sans-serif;
-	/*font-family: 'Ubuntu', sans-serif;*/
-	border-bottom: 3px solid rgba(var(--cor-global),1.0);
+	border-bottom: 1px solid rgba(var(--cor-global),1.0);
 	color: rgba(var(--cor-global),1.0);
 }
-.letras {
-	font-weight: bold;
-	/*font-family: 'Roboto', sans-serif;*/
-}
+
+.letras h1 {
+	opacity: 0.0;
+}	
 
 .teclado {
 	width: 100%;
@@ -63,7 +69,6 @@ span {
 	font-family: 'Ubuntu', sans-serif;
 }
 .tablela-teclado div {
-
 	font-size: 30px;
 	border-radius: 5px;
 	padding: .15em;
@@ -73,16 +78,23 @@ span {
 	justify-content: center;
 	border:  1px solid rgba(var(--cor-global),1.0);
 	color: rgba(var(--cor-global),1.0);
+
 }
+
+.tablela-teclado div:hover {
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
 .verde {
-	background-color: green;
+	background-color: rgba(92,184,92,0.5);
 }
 .vermelho {
-	background-color: red;
+	background-color: rgba(217,83,79,0.5);
 }
 
 .btn {
-	height: 40px;
+	margin-bottom: 1em;
 }
 
 #btnJogoNovo {
@@ -117,14 +129,14 @@ span {
 
 .grid-btn1 {
     grid-column: ;grid-row-start: 4;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: flex-end;
 	margin-right: 1em;
 }
 .grid-btn2 {	
 	grid-column-start: 2;
 	grid-row-start: 4;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: flex-start;
 	margin-left: 1em;
 }
@@ -132,6 +144,10 @@ span {
 	font-size: 25px;
 	width: 35px;
 	padding: 0.10em;
+}
+.letras {
+	margin: 0 .25em 0 .25em;
+	font-size: 30px;
 }
 
 
@@ -147,10 +163,7 @@ span {
 	  grid-template-columns: 1fr 1fr;
 	  grid-template-rows: 60px 2fr 130px 60px 5px;
 }	
-.canvas {
-	width: 350px;
-	height: 300px;
-}
+
 /*GRID NAVBAR*/
 .grid-navbar {
 	grid-column: span 2;
@@ -162,14 +175,14 @@ span {
 
 .grid-btn1 {
     grid-column: ;grid-row-start: 4;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: flex-end;
 	margin-right: .5em;
 }
 .grid-btn2 {	
 	grid-column-start: 2;
 	grid-row-start: 4;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: flex-start;
 	margin-left: .5em;
 }	
@@ -188,6 +201,10 @@ span {
 	width: 32px;
 	padding: 0.10em;
 }
+.letras {
+	margin: 0 .25em 0 .25em;
+	font-size: 30px;
+}
 
 
 /*-------------*/
@@ -197,19 +214,18 @@ span {
 /* CELPHONE */
 /*----------------------------------------------------------------------*/
 @media only screen and (max-width: 480px) {
-.grid-imagem h1 {
-	font-size: 18px;	
-}	
-
+.titulo {
+	font-size: 18px;
+}
 .grid-container {
   grid-template-rows: 60px 1fr 120px 40px 40px 5px;
 }	
 .canvas {
-	width: 300px;
-	height: 250px;
+
 }
 .btn {
-	height: 30px;
+	margin-top: 1em;
+	height: auto;
 }
 .grid-btn1 {
 	margin-top: 10px;
@@ -232,9 +248,9 @@ span {
 	padding: 0.10em;
 }
 
-.palavra-secreta {
-	height: 40px;
-	border-bottom: 2px solid blac;
+.letras {
+	margin: 0 .25em 0 .25em;
+	font-size: 30px;
 }
 
 

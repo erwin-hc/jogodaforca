@@ -39,24 +39,23 @@ var corPadrao = sessionStorage.getItem('corPadrao');
 var bgPadrao = sessionStorage.getItem('bgPadrao');
 var svgPadrao = sessionStorage.getItem('svgPadrao');
 
-window.onload = functionAddAttribute;
-// ONLOAD ATRIBUTE
-function functionAddAttribute(){
-    document.documentElement.style.setProperty("--bg-global", bgPadrao);
-    document.documentElement.style.setProperty("--cor-global", corPadrao);
-    document.documentElement.style.setProperty("--cor-svg-global", svgPadrao);
-};
+// SETA CORES PADRAO
+document.documentElement.style.setProperty("--bg-global", bgPadrao);
+document.documentElement.style.setProperty("--cor-global", corPadrao);
+document.documentElement.style.setProperty("--cor-svg-global", svgPadrao);
 
 // CLICK ICONE DARK
 iconeDark.addEventListener("click", function(){
     document.documentElement.style.setProperty("--bg-global", bgDark);
     sessionStorage.setItem("bgPadrao", bgDark);
 
+
 });
 // CLICK ICONE LIGHT
 iconeLight.addEventListener("click", function(){
     document.documentElement.style.setProperty("--bg-global", bgLight);
-    sessionStorage.setItem("bgPadrao", bgLight);    
+    sessionStorage.setItem("bgPadrao", bgLight);  
+
 });
 // MUDA PARA COR AZUL
 cor_azul.addEventListener("click", function() {
