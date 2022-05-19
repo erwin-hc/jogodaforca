@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
@@ -24,6 +27,7 @@
 	stroke: rgba(var(--cor-global),1.0);
 	stroke-width: 6px;
 	stroke-linecap: round;
+
 }
 .partes {
 	opacity: 0.0;
@@ -107,6 +111,7 @@
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
 /*BOTOES*/
+
 .flex-buttons {
 	flex-direction: row;
 	justify-content: center;
@@ -115,7 +120,6 @@
 .btns {
 	height: 35px;
 	width: 160px;
-
 }
 #btnJogoNovo {
 	background-color: rgba(var(--cor-global),1.0);
@@ -128,7 +132,66 @@
 	color: rgba(var(--cor-global),1.0);
 }
 
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*MODAL MSG*/
 
+.modal-msg {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	background-color: rgba(0,0,0,0.7);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container-msg {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
+
+	/*background-color: rgba(92,184,92,0.8);*/
+	border-radius: 25px;
+}
+.img-container-modal {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.btns-modal {
+	height: 35px;
+	width: 100px;
+	margin: 0.5em;
+
+}
+
+#btnModalNovo {
+	border-radius: 25px;
+	background-color: rgba(var(--cor-global),1.0);
+	border:  2px solid rgba(var(--cor-global),1.0);
+	color: #f2f2f2;
+}
+#btnModalSair {
+	border-radius: 25px;
+	background-color: rgba(var(--cor-global),0.1);
+	border:  2px solid rgba(var(--cor-global),1.0);
+	color: rgba(var(--cor-global),1.0);
+}
+
+#ico-vitoria {
+	width: 8em;
+	padding: 1em;
+}
 /*----------------------------------------------------------------------*/
 /*MEDIA QUERIES*/
 /*----------------------------------------------------------------------*/
@@ -162,11 +225,44 @@
 
 }
 
+.container-msg {
+	width: 500px;
+	height: 150px;
+	border:  4px solid rgba(var(--cor-global),1.0);
+}
+#ico-vitoria {
+	width: 4em;
+}	
+.titulo-msg {
+	text-transform: uppercase;
+	color: #f2f2f2;
+	font-size: 25px;
+	letter-spacing: 4px;
+	font-family: 'Press Start 2P', cursive;
+}
+
 }
 /*----------------------------------------------------------------------*/
 /* TABLET */
 /*----------------------------------------------------------------------*/
 @media only screen and (min-width: 481px) and (max-width:768px) {
+
+.container-msg {
+	width: 400px;
+	height: 150px;
+	border:  4px solid rgba(var(--cor-global),1.0);
+}
+#ico-vitoria {
+	width: 4em;
+}	
+.titulo-msg {
+	text-transform: uppercase;
+	color: #f2f2f2;
+	font-size: 25px;
+	letter-spacing: 4px;
+	font-family: 'Press Start 2P', cursive;
+}
+
 
 }
 
@@ -174,5 +270,22 @@
 /* CELPHONE */
 /*----------------------------------------------------------------------*/
 @media only screen and (max-width: 480px) {
+
+.container-msg {
+	width: 300px;
+	height: 150px;
+	border:  4px solid rgba(var(--cor-global),1.0);
+}
+#ico-vitoria {
+	width: 4em;
+}	
+.titulo-msg {
+	text-transform: uppercase;
+	color: #f2f2f2;
+	font-size: 25px;
+	letter-spacing: 4px;
+	font-family: 'Press Start 2P', cursive;
+}
+
 
 }

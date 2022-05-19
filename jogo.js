@@ -180,6 +180,19 @@ var divTeclas = divTeclado.querySelectorAll("div");
 var divPalavra = document.querySelector(".palavra");
 var bonecoSvg = document.querySelector(".svg-boneco");
 
+/// MODAL MSG
+var modalMsg = document.querySelector(".modal-msg");
+var btnModalNovo = document.querySelector("#btnModalNovo");
+var btnModalSair = document.querySelector("#btnModalSair");
+
+// img-container-modal BACKGROUND-COLOR VERDE/VERMELHO
+// img-msg IMAGEM VITORIA/DERROTA
+// titulo-msg TITULO VENCEU/PERDEU
+
+var divModal = document.querySelector(".container-msg");
+var imgModal = document.querySelector(".img-msg");
+var tituloModal = document.querySelector(".titulo-msg");
+
 // AUXILIAR PARA COMPARAR SE ACERTOU PALAVRA
 var auxVenceu = 0;
 var auxBoneco = -1;
@@ -208,8 +221,11 @@ divTeclas.forEach(function (item) {
     		bonecoSvg.children[auxBoneco].style.opacity = 1;
 
     		if (auxBoneco >8) {
-    			alert("PERDEU PLAYBOY");
-				item.style.pointerEvents = "none";
+    			// alert("PERDEU PLAYBOY");
+    				tituloModal.textContent = "PERDEU";
+					divModal.style.backgroundColor = "rgba(217,83,79,0.6)";
+					imgModal.src="assets/derrota.svg";
+					modalMsg.classList.toggle("hide");
     		}
     	};
 
@@ -223,7 +239,11 @@ divTeclas.forEach(function (item) {
 				// APAGA ESPACOS DA PALAVRA 
 				var tiraEspacoPalavra = arrayPalavraSecreta.filter(e => String(e).trim());
 				if (auxVenceu == tiraEspacoPalavra.length) {
-					alert("VENCEU");
+					// alert("VENCEU");
+					tituloModal.textContent = "VENCEU";
+					divModal.style.backgroundColor = "rgba(92,184,92,0.6)";
+					imgModal.src="assets/vitoria.svg";
+					modalMsg.classList.toggle("hide");
 
 				}
 			};
@@ -231,8 +251,12 @@ divTeclas.forEach(function (item) {
 
     });
 
-    console.log(item)
-
-
 });
 
+btnModalNovo.addEventListener("click", function() {
+	sessionStorage.setItem("aleatorio", "SIM");
+	modalMsg.classList.add("hide");
+});
+btnModalSair.addEventListener("click", function() {
+	modalMsg.classList.add("hide");
+});

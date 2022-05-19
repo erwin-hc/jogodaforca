@@ -41,7 +41,7 @@ body {
 
 /*HIDE */
 .hide {
-	display: none;
+	display: none!important;
 }
 
 
