@@ -127,9 +127,9 @@
 	color: #f2f2f2;
 }
 #btnJogoSair {
-	background-color: rgba(var(--cor-global),0.1);
+	background-color: rgba(var(--cor-global),1.0);
 	border:  2px solid rgba(var(--cor-global),1.0);
-	color: rgba(var(--cor-global),1.0);
+	color: #f2f2f2;
 }
 
 /*------------------------------------------------------------*/
