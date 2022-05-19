@@ -47,20 +47,20 @@
 		<!-- --- IMAGEM --- -->
 		<div class="aux-modal flex-main">
 			<form>
-				<fieldset>
-					<input class="input inputPalavra" type="text" placeholder="PALAVRA SECRETA" maxlength="10" required>
+
+					<input class="input inputPalavra" type="text" placeholder="PALAVRA SECRETA" maxlength="10" pattern="[a-zA-Z]+" required>
 					<label class="label" >Máximo 10 Letras</label>
 					<input class="input inputGrupo" type="text" placeholder="GRUPO (ex: FILME, etc)" maxlength="18" required>
 					<label class="label" >Máximo 18 Letras</label>
-					<input class="input inputDica" type="text" placeholder="DICA (ex: AÇÃO, etc)" maxlength="18" required>					
+					<input class="input inputDica" type="text" placeholder="DICA (ex: AÇÃO, etc)" maxlength="18" required>				
 					<label class="label" >Máximo 18 Letras</label>
-				</fieldset>
+
 			</form>
 		</div>
 		<!-- BOTOES -->
 		<div class="aux-modal flex-buttons">
 					<!-- ---BOTAO ALEATORIO--- -->
-					<button type="button" 						id="btnPalavraSalvar" class="btns">SALVAR E JOGAR</button> 
+					<button type="submit" 						id="btnPalavraSalvar" class="btns">SALVAR E JOGAR</button> 
 					<!-- ---BOTAO CRIAR--- -->
 					<a href="index.html"> <button type="button" id="btnPalavraSair" class="btns">SAIR </button> </a> 
 		</div>
