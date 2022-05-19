@@ -12,7 +12,6 @@
 	font-size: 20px;
 }
 
-
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
 /*------------------------------------------------------------*/
@@ -96,7 +95,6 @@
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-
 .verde {
 	background-color: rgba(92,184,92,0.5);
 }
@@ -136,6 +134,33 @@
 /*----------------------------------------------------------------------*/
 /* DESKTOP  */
 @media only screen and (min-width: 769px) {
+
+.titulo {
+	font-size: 36px;
+	margin: 0.10em;
+}	
+
+.flex-palavra div {
+	font-size: 36px;
+	width: 36px;
+	margin: .5em .5em;
+}	
+
+.tablela-teclado div {
+	font-size: 36px;
+	width: 36px;
+	height: 24px;
+
+	padding: .15em;
+	margin: .15em;
+}	
+
+.btns {
+	height: 40px;
+	width: 160px;
+	margin-top: 1em;
+
+}
 
 }
 /*----------------------------------------------------------------------*/

@@ -114,6 +114,31 @@ var objPalavrasAleatorias = [
 		grupo: "cursos",
 		dica: "internet"
 	},
+		{
+		palavra: "js html css",
+		grupo: "tecnologia",
+		dica: "tríade front end"
+		},
+		{
+		palavra: "button",
+		grupo: "tecnologia",
+		dica: "tag html"
+		},
+		{
+		palavra: "martelo",
+		grupo: "ferramenta",
+		dica: "carpinteiro usa"
+		},
+		{
+		palavra: "serrote",
+		grupo: "ferramenta",
+		dica: "carpinteiro usa"
+		},
+		{
+		palavra: "talhadeira",
+		grupo: "ferramenta",
+		dica: "pedreiro usa"
+		},
 
 ];
 
@@ -184,7 +209,7 @@ divTeclas.forEach(function (item) {
 
     		if (auxBoneco >8) {
     			alert("PERDEU PLAYBOY");
-
+				item.style.pointerEvents = "none";
     		}
     	};
 
@@ -192,7 +217,6 @@ divTeclas.forEach(function (item) {
 		for (var i=0;i<divPalavra.children.length;i++) {
 			
 			if (divPalavra.children[i].textContent == tecla) {
-
 				divPalavra.children[i].firstChild.style.opacity = 1;
 				auxVenceu++;
 
@@ -205,7 +229,10 @@ divTeclas.forEach(function (item) {
 			};
 		};
 
-
     });
+
+    console.log(item)
+
+
 });
 
