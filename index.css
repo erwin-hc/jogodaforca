@@ -60,6 +60,7 @@ body {
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
 /*---NAVBAR---*/
+
 .flex-navbar {
 	background-color: rgba(var(--cor-global),0.3);
 	border:  2px solid rgba(var(--cor-global),0.3);
@@ -81,8 +82,8 @@ body {
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
-
 /*---MODAL---*/
+
 .modal {
 	position: absolute;
 	top: 20px;
@@ -126,13 +127,15 @@ body {
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
+/*TITULO*/
+
 .flex-titulo {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.titulo-inicio {
+.titulo {
 	font-size: 35px;
 	letter-spacing: 2px;
 	color: rgba(var(--cor-global),1.0);
@@ -144,11 +147,12 @@ body {
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
+/*MAIN*/
 
-/*GRID IMAGEM*/
-.flex-imagem {
+.flex-main {
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 	align-items: center;
 	flex: 1;
 }
@@ -164,21 +168,22 @@ body {
 /*-------------------------------------------------------------------------------------*/
 /*--BOTOES---*/
 
-.flex-button {
+.flex-buttons {
  	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
-	flex: 1;
 }
-.btns-index {
+.btns {
 	font-family: "Poppins",sans-serif;
 	border-radius: 25px;
 	padding: .10em;
 	width: 250px;
 	margin: .5em;
+	height: 55px;
+	cursor: pointer;
 }
-.btns-index:hover {
+.btns:hover {
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 #btnIndexAleatorio {

@@ -159,8 +159,6 @@ var bonecoSvg = document.querySelector(".svg-boneco");
 var auxVenceu = 0;
 var auxBoneco = -1;
 
-console.log(auxBoneco)
-
 divTeclas.forEach(function (item) {
 
     item.addEventListener('click', function (e) {

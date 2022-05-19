@@ -1,21 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*TITULO*/
 
-.div-titulo {
-	width: 100%;
-	height: 70px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.flex-titulo {
 	flex-direction: column;
+	margin: 0.10em;
 }
-.titulo {	
-	line-height: 1.2;
-	font-size: 28px;
-	letter-spacing: 2px;
-	color: rgba(var(--cor-global),1.0);
-	text-align: center;
-	font-family: 'Ubuntu', sans-serif;
+
+.titulo {
+	font-size: 20px;
 }
+
+
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*BONECO*/
 
 .svg-boneco {	
 	width: 350px;
@@ -28,31 +29,30 @@
 .partes {
 	opacity: 0.0;
 }
-.grid-teclado {
-	margin-top: .5em;
-	grid-column: span 2;
-	width: 100%;
-	height: 100%;
-}
 
-.palavra {
-	width: 100%;
-	height: 50px;
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*PALAVRA SECRETA*/
+
+.flex-palavra {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	font-family: 'Poppins',sans-serif;
-
+	min-height: 60px;
 }
-.palavra div {
-	width: 20px;
-	padding: 1.5px;
-	margin: 3.5px;
+.flex-palavra div {
+	font-size: 24px;
+	width: 24px;
+	margin: 0 0.20em 0 .20em;
+	font-weight: bold;
+	line-height: 1.5;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-family: 'Exo 2', sans-serif;
+
 	border-bottom: 1px solid rgba(var(--cor-global),1.0);
 	color: rgba(var(--cor-global),1.0);
 }
@@ -61,18 +61,29 @@
 	opacity: 0.0;
 }	
 
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*TECLADO*/
+.flex-teclado {
+	min-height: 150px;
+	display: flex;
+	justify-content: center;
+}
+
 .teclado {
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-family: 'Ubuntu', sans-serif;
+
 }
 .tablela-teclado div {
-	font-size: 30px;
+	font-size: 24px;
+	width: 24px;
 	border-radius: 5px;
-	padding: .15em;
-	margin: .15em;
+	padding: .10em;
+	margin: .05em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -93,18 +104,21 @@
 	background-color: rgba(217,83,79,0.5);
 }
 
-.btnJogo {
-	font-family: "Poppins",sans-serif;
-	border-radius: 25px;
-	padding: .15em;
-	transition: 0.25s transform;
-	transition: 0.25s box-shadow;
-	width: 250px;
-	height: 40px;
-	margin-top: 2em;
+
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*BOTOES*/
+.flex-buttons {
+	flex-direction: row;
+	justify-content: center;
 }
 
+.btns {
+	height: 35px;
+	width: 160px;
 
+}
 #btnJogoNovo {
 	background-color: rgba(var(--cor-global),1.0);
 	border:  2px solid rgba(var(--cor-global),1.0);
@@ -122,144 +136,18 @@
 /*----------------------------------------------------------------------*/
 /* DESKTOP  */
 @media only screen and (min-width: 769px) {
-/*GRID-CONTAINER	*/
-.grid-container {
-	  grid-template-columns: 1fr 1fr;
-	  grid-template-rows: 60px 2fr 130px 60px 5px;
-}	
-/*GRID NAVBAR*/
-.grid-navbar {
-	grid-column: span 2;
-}
-/*GRID IMAGEM*/
-.grid-imagem {
-	grid-column: span 2;
-}
-
-.grid-btn1 {
-    grid-column: ;grid-row-start: 4;
-	align-items: flex-end;
-	justify-content: flex-end;
-	margin-right: 1em;
-}
-.grid-btn2 {	
-	grid-column-start: 2;
-	grid-row-start: 4;
-	align-items: flex-end;
-	justify-content: flex-start;
-	margin-left: 1em;
-}
-.tablela-teclado div {
-	font-size: 25px;
-	width: 35px;
-	padding: 0.10em;
-}
-.letras {
-	margin: 0 .25em 0 .25em;
-	font-size: 30px;
-}
-
 
 }
 /*----------------------------------------------------------------------*/
 /* TABLET */
 /*----------------------------------------------------------------------*/
 @media only screen and (min-width: 481px) and (max-width:768px) {
-.grid-imagem h1 {
-	font-size: 24px;	
-}		
-.grid-container {
-	  grid-template-columns: 1fr 1fr;
-	  grid-template-rows: 60px 2fr 130px 60px 5px;
-}	
 
-/*GRID NAVBAR*/
-.grid-navbar {
-	grid-column: span 2;
-}
-/*GRID IMAGEM*/
-.grid-imagem {
-	grid-column: span 2;
-}
-
-.grid-btn1 {
-    grid-column: ;grid-row-start: 4;
-	align-items: flex-end;
-	justify-content: flex-end;
-	margin-right: .5em;
-}
-.grid-btn2 {	
-	grid-column-start: 2;
-	grid-row-start: 4;
-	align-items: flex-end;
-	justify-content: flex-start;
-	margin-left: .5em;
-}	
-.input {
-	width: 400px;
-}
-#btnJogoNovo {
-	width: 200px;
-}
-#btnJogoSair {
-	width: 200px;
-}
-.tablela-teclado div {
-	font-size: 25px;
-
-	width: 32px;
-	padding: 0.10em;
-}
-.letras {
-	margin: 0 .25em 0 .25em;
-	font-size: 30px;
-}
-
-
-/*-------------*/
 }
 
 /*----------------------------------------------------------------------*/
 /* CELPHONE */
 /*----------------------------------------------------------------------*/
 @media only screen and (max-width: 480px) {
-.titulo {
-	font-size: 18px;
-}
-.grid-container {
-  grid-template-rows: 60px 1fr 120px 40px 40px 5px;
-}	
 
-.btnJogo {
-	margin-top: .5em;
-}
-.grid-btn1 {
-	margin-top: 10px;
-	grid-row-start: 4;
-
-}
-.grid-btn2 {	
-	margin-top: 10px;
-	grid-row-start: 5;
-
-}		
-.input {
-	width: 300px;
-}
-
-.tablela-teclado div {
-	font-size: 20px;
-	width: 22px;
-	height: 25px;
-	padding: 0.10em;
-}
-
-.letras {
-	margin: 0 .25em 0 .25em;
-	font-size: 30px;
-}
-
-
-
-/*---------*/
 }

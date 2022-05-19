@@ -14,9 +14,9 @@
 	<!-- <link rel="stylesheet" type="text/css" href="default_debuger.css"> -->
 </head>
 <body>
-	<div class="grid-container">
+	<div class="flex-container">
 		<!-- ---NAV BAR--- -->
-		<div class="grid-navbar">
+		<div class="flex-navbar">
 			<img alt="Logo"  id="ico-logo"   style="float: left;" 	 class="icones_svg svg-global" src="assets/logo.svg"> 
 			<img alt="Conf"  id="ico-config" style="float: right;"  class="icones_svg svg-global" src="assets/menu.svg"> 
 			<img alt="Dark"  id="ico-dark"   style="float: right;"  class="icones_svg svg-global" src="assets/dark.svg"> 
@@ -38,16 +38,18 @@
 			 <a href="https://www.linkedin.com/in/erwin-guilherme-stein-74473138/"> <img class="quadrado icones_svg svg-global" src="assets/linkedin.svg"> </a> 
 		</div>
 		</div>
-		<!-- --- IMAGEM --- -->
-		<div class="aux-modal grid-imagem">
-			<div class="div-titulo">
+
+		<!-- TITULO -->
+		<div class="flex-titulo">
 			<h1 class="titulo grupo"> </h1>
 			<h1 class="titulo dica"> </h1>
-			</div>
+		</div>
+
+		<!-- --- MAIN --- -->
+		<div class="aux-modal flex-main">
 			<div class="svg-container">
 				<svg class="svg-boneco">
 					<!-- BONECO -->						
-					<!-- BASE DA FORCA -->
 					<line class="partes" data-id="1"   x1="20" x2="110" y1="290" y2="290"/>
 					<line class="partes" data-id="2"   x1="50" x2="50"  y1="20"  y2="290"/>
 					<line class="partes" data-id="3"   x1="50" x2="190" y1="20" y2="20"/>
@@ -56,27 +58,24 @@
 					<line class="partes" data-id="6"   x1="190" x2="190" y1="90" y2="160"/>
 					<line class="partes" data-id="7"   x1="150" x2="190" y1="130" y2="90"/>
 					<line class="partes" data-id="8"   x1="230" x2="190" y1="130" y2="90"/>
-
-
 					<line class="partes" data-id="9"   x1="190" x2="230" y1="160" y2="210"/>
 					<line class="partes" data-id="10"  x1="190" x2="150" y1="160" y2="210"/>
 				</svg>
-			</div>
-
-			<div class="palavra">
-
-<!-- 				<div class="letras">P</div>
-				<div class="letras">A</div>
-				<div class="letras">L</div>
-				<div class="letras">A</div>
-				<div class="letras">V</div>
-				<div class="letras">R</div>
-				<div class="letras">A</div> -->
-				
-			</div>
+			</div>			
 		</div>
-		<div class="grid-teclado">
 
+		<!-- PALAVRA SECRETA -->
+		<div class="flex-palavra palavra">
+
+<!-- 					<div class="letras">A</div>
+					<div class="letras">L</div>
+					<div class="letras">A</div>
+					<div class="letras">V</div>
+					<div class="letras">R</div>
+					<div class="letras">A</div> --> 
+		</div>
+			
+		<div class="flex-teclado">
 			<div class="teclado">
 				<table class="tablela-teclado">
 					<tr>
@@ -117,21 +116,16 @@
 					</tr>
 				</table>
 			</div>	
-
-
-
 		</div>
-		<!-- ---BOTAO ALEATORIO--- -->
-		<div class="aux-modal grid-btn grid-btn1">
-			<div class="div-botoes div-btn-1"> <a href="jogo.html"> <button type="button" id="btnJogoNovo" class="btnJogo">NOVO JOGO </button> </a> </div>	
+	
+		<!-- BOTOES -->
+		<div class="flex-buttons">
+			<!-- ---BOTAO ALEATORIO--- -->
+			<a href="jogo.html"> <button type="button"  id="btnJogoNovo" class="btns">NOVO JOGO </button> </a> 
+			<!-- ---BOTAO CRIAR--- -->
+		    <a href="index.html"> <button type="button" id="btnJogoSair"  class="btns">SAIR </button> </a> 
 		</div>
-		<!-- ---BOTAO CRIAR--- -->
-		<div class="aux-modal grid-btn grid-btn2">
-			<div class="div-botoes div-btn-2"> <a href="index.html"> <button id="btnJogoSair" type="button" class="btnJogo">SAIR </button> </a> </div>
-		</div>
-	</div>
-	<!-- --- FOOTER --- -->
-	<div class="aux-modal grid-footer"></div>
+
 
 
 <script defer type="text/javascript" src="index.js"></script>

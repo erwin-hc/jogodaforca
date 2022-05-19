@@ -98,13 +98,12 @@ cor_vermelho.addEventListener("click", function() {
 });
 
 var btnAleatorio = document.querySelector("#btnIndexAleatorio");
-var btnCriar = document.querySelector("#btnIndexCriar");
-
 btnAleatorio.addEventListener("click", function() {
     sessionStorage.setItem("aleatorio", "SIM");
     window.location.href = "jogo.html";
 });
 
+var btnCriar = document.querySelector("#btnIndexCriar");
 btnCriar.addEventListener("click", function() {
     sessionStorage.setItem("aleatorio", "NAO");
     window.location.href = "palavra.html";

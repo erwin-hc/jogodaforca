@@ -14,9 +14,9 @@
 	<!-- <link rel="stylesheet" type="text/css" href="default_debuger.css"> -->
 </head>
 <body>
-	<div class="grid-container">
+	<div class="flex-container">
 		<!-- ---NAV BAR--- -->
-		<div class="grid-navbar">
+		<div class="flex-navbar">
 			<img alt="Logo"  id="ico-logo"   style="float: left;" 	 class="icones_svg svg-global" src="assets/logo.svg"> 
 			<img alt="Conf"  id="ico-config" style="float: right;"  class="icones_svg svg-global" src="assets/menu.svg"> 
 			<img alt="Dark"  id="ico-dark"   style="float: right;"  class="icones_svg svg-global" src="assets/dark.svg"> 
@@ -38,9 +38,14 @@
 			<a href="https://www.linkedin.com/in/erwin-guilherme-stein-74473138/"> <img class="quadrado icones_svg svg-global" src="assets/linkedin.svg"> </a> 
 			</div>
 		</div>
+
+		<!-- TITULO -->
+		<div class="flex-titulo">
+			<h1 class="titulo">CRIAR PALAVRA</h1>
+		</div>	
+
 		<!-- --- IMAGEM --- -->
-		<div class="aux-modal grid-imagem-palavra">
-			<h1 class="titulo-palavra">CRIAR PALAVRA</h1>
+		<div class="aux-modal flex-main">
 			<form>
 				<fieldset>
 					<input class="input inputPalavra" type="text" placeholder="PALAVRA SECRETA" maxlength="10" required>
@@ -52,17 +57,12 @@
 				</fieldset>
 			</form>
 		</div>
-		<!-- ---BOTAO ALEATORIO--- -->
-		<div class="aux-modal grid-btn grid-btn1">
-			<div class="div-botoes div-btn-1"> 
-				<button type="button" id="btnPalavraSalvar" class="btnPalavra">SALVAR E JOGAR</button> 
-			</div>	
-		</div>
-		<!-- ---BOTAO CRIAR--- -->
-		<div class="aux-modal grid-btn grid-btn2">
-			<div class="div-botoes div-btn-2"> 
-				<a href="index.html"> <button type="button" id="btnPalavraSair" class="btnPalavra">SAIR </button> </a> 
-			</div>
+		<!-- BOTOES -->
+		<div class="aux-modal flex-buttons">
+					<!-- ---BOTAO ALEATORIO--- -->
+					<button type="button" 						id="btnPalavraSalvar" class="btns">SALVAR E JOGAR</button> 
+					<!-- ---BOTAO CRIAR--- -->
+					<a href="index.html"> <button type="button" id="btnPalavraSair" class="btns">SAIR </button> </a> 
 		</div>
 	</div>
 	<!-- --- FOOTER --- -->

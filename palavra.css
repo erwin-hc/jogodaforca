@@ -1,24 +1,33 @@
+
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*IMPUTS*/
+
 .input {
 	display: block;
-	width: 500px;
-	letter-spacing: 3px;
-	padding: .5em;
+	min-width: 325px;
 	text-transform: uppercase;
-	line-height: 2;
 	background-color: rgba(var(--cor-global),0.1);
 	border:  2px solid rgba(var(--cor-global),1.0);
 	color: rgba(var(--cor-global),1.0);
+	padding: 0.5em;
 	margin-top: 2em;
-	margin-bottom: .25em;
+	margin-bottom: .5em;
+
 }
 
 .label {
 	color: rgba(var(--cor-global),1.0);
 	letter-spacing: 4px;
-	padding: .5em;
-	font-size: 12px;
 
 }
+
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*BOTOES*/
+
 
 #btnPalavraSalvar {
 	background-color: rgba(var(--cor-global),1.0);
@@ -30,35 +39,7 @@
 	border:  2px solid rgba(var(--cor-global),1.0);
 	color: rgba(var(--cor-global),1.0);
 }
-.titulo-palavra {
-	font-size: 30px;
-	letter-spacing: 6px;
-	line-height: 1.5;
-	color: rgba(var(--cor-global),1.0);
-	padding: 0.15em;
-	text-align: center;
-	font-family: 'Exo 2', sans-serif;
-}
 
-.grid-imagem-palavra {
-	grid-area: imagem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 500px;
-}
-
-.btnPalavra {
-	font-family: "Poppins",sans-serif;
-	border-radius: 25px;
-	padding: .15em;
-	transition: 0.25s transform;
-	transition: 0.25s box-shadow;
-	width: 250px;
-	height: 40px;
-
-}
 
 /*----------------------------------------------------------------------*/
 /*MEDIA QUERIES*/
@@ -71,18 +52,12 @@
 /* TABLET */
 /*----------------------------------------------------------------------*/
 @media only screen and (min-width: 481px) and (max-width:768px) {
-.input {
-	width: 400px;
-}
 
 }
 /*----------------------------------------------------------------------*/
 /* CELPHONE */
 /*----------------------------------------------------------------------*/
 @media only screen and (max-width: 480px) {
-.input {
-	width: 300px;
-}
 
 
 }
