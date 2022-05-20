@@ -9,136 +9,146 @@ var divPalavra = document.querySelector(".palavra");
 
 // JSON COM 20 PALAVRAS PARA PEGAR NO ALEATORIO
 var objPalavrasAleatorias = [
-	{
-		palavra: "lampada",
-		grupo: "objeto",
-		dica: "toda casa tem"
-	},
-	{
-		palavra: "celular",
-		grupo: "objeto",
-		dica: "ninguém vive sem"
-	},
-	{
-		palavra: "bicicleta",
-		grupo: "objeto",
-		dica: "qualidade de vida"
-	},
-	{
-		palavra: "forno",
-		grupo: "objeto",
-		dica: "para cozinhar"
-	},
-	{
-		palavra: "ventilador",
-		grupo: "objeto",
-		dica: "verão"
-	},
-	{
-		palavra: "cerveja",
-		grupo: "bebida",
-		dica: "boa é tomar gelada"
-	},
-		{
-		palavra: "whisky",
-		grupo: "bebida",
-		dica: "scotch"
-	},
-		{
-		palavra: "limonada",
-		grupo: "bebida",
-		dica: "toda criança gosta"
-	},
-		{
-		palavra: "pinga",
-		grupo: "bebida",
-		dica: "feita no brasil"
-	},
-		{
-		palavra: "vinho",
-		grupo: "bebida",
-		dica: "biblia"
-	},
-	{
-		palavra: "metallica",
-		grupo: "musica",
-		dica: "big four"
-	},
-		{
-		palavra: "sepultura",
-		grupo: "musica",
-		dica: "metal nacional"
-	},
-		{
-		palavra: "colera",
-		grupo: "musica",
-		dica: "banda punk"
-	},
-		{
-		palavra: "slayer",
-		grupo: "musica",
-		dica: "trash metal"
-	},
-		{
-		palavra: "ramones",
-		grupo: "musica",
-		dica: "banda punk"
-	},
-	{
-		palavra: "exorcista",
-		grupo: "filme",
-		dica: "classico de terror"
-	},
-	{
-		palavra: "star wars",
-		grupo: "filme",
-		dica: "classico sci fi"
-	},
-	{
-		palavra: "casablanca",
-		grupo: "filme",
-		dica: "1942"
-	},
-	{
-		palavra: "psicose",
-		grupo: "filme",
-		dica: "alfred hitchcock"
-	},
-	{
-		palavra: "nosferatu",
-		grupo: "filme",
-		dica: "filme vampiros"
-	},
-	{
-		palavra: "alura",
-		grupo: "cursos",
-		dica: "internet"
-	},
-		{
-		palavra: "js html css",
-		grupo: "tecnologia",
-		dica: "tríade front end"
-		},
-		{
-		palavra: "button",
-		grupo: "tecnologia",
-		dica: "tag html"
-		},
-		{
-		palavra: "martelo",
-		grupo: "ferramenta",
-		dica: "carpinteiro usa"
-		},
-		{
-		palavra: "serrote",
-		grupo: "ferramenta",
-		dica: "carpinteiro usa"
-		},
-		{
-		palavra: "talhadeira",
-		grupo: "ferramenta",
-		dica: "pedreiro usa"
-		},
+{
+palavra: "lampada",
+grupo: "objeto",
+dica: "toda casa tem"
+},
+{
+palavra: "celular",
+grupo: "objeto",
+dica: "ninguém vive sem"
+},
+{
+palavra: "bicicleta",
+grupo: "objeto",
+dica: "qualidade de vida"
+},
+{
+palavra: "forno",
+grupo: "objeto",
+dica: "para cozinhar"
+},
+{
+palavra: "ventilador",
+grupo: "objeto",
+dica: "verão"
+},
+{
+palavra: "cerveja",
+grupo: "bebida",
+dica: "boa é tomar gelada"
+},
+{
+palavra: "whisky",
+grupo: "bebida",
+dica: "scotch"
+},
+{
+palavra: "limonada",
+grupo: "bebida",
+dica: "toda criança gosta"
+},
+{
+palavra: "pinga",
+grupo: "bebida",
+dica: "feita no brasil"
+},
+{
+palavra: "vinho",
+grupo: "bebida",
+dica: "biblia"
+},
+{
+palavra: "metallica",
+grupo: "musica",
+dica: "big four"
+},
+{
+palavra: "sepultura",
+grupo: "musica",
+dica: "metal nacional"
+},
+{
+palavra: "colera",
+grupo: "musica",
+dica: "banda punk"
+},
+{
+palavra: "slayer",
+grupo: "musica",
+dica: "trash metal"
+},
+{
+palavra: "ramones",
+grupo: "musica",
+dica: "banda punk"
+},
+{
+palavra: "exorcista",
+grupo: "filme",
+dica: "classico de terror"
+},
+{
+palavra: "star wars",
+grupo: "filme",
+dica: "classico sci fi"
+},
+{
+palavra: "casablanca",
+grupo: "filme",
+dica: "1942"
+},
+{
+palavra: "psicose",
+grupo: "filme",
+dica: "alfred hitchcock"
+},
+{
+palavra: "nosferatu",
+grupo: "filme",
+dica: "filme vampiros"
+},
+{
+palavra: "alura",
+grupo: "cursos",
+dica: "internet"
+},
+{
+palavra: "js html css",
+grupo: "tecnologia",
+dica: "tríade front end"
+},
+{
+palavra: "button",
+grupo: "tecnologia",
+dica: "tag html"
+},
+{
+palavra: "martelo",
+grupo: "ferramenta",
+dica: "carpinteiro usa"
+},
+{
+palavra: "serrote",
+grupo: "ferramenta",
+dica: "carpinteiro usa"
+},
+{
+palavra: "talhadeira",
+grupo: "ferramenta",
+dica: "pedreiro usa"
+},
+{
+palavra: "melancia",
+grupo: "fruta",
+dica: "verde vermelha grande"
+},
+{
+palavra: "carambola",
+grupo: "fruta",
+dica: "parece uma estrela"
+},
 
 ];
 
